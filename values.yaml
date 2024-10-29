@@ -1,12 +1,18 @@
 replicaCount: 1
 
 
+# autoscaling:
+#   enabled: true
+#   minReplicas: 1
+#   maxReplicas: 10  # Define max number of pods
+#   targetCPUUtilizationPercentage: 80 # Trigger scaling when CPU usage reaches 80%
+  # You can also use targetMemoryUtilizationPercentage if you want to scale based on memory
+
 autoscaling:
   enabled: true
   minReplicas: 1
   maxReplicas: 10  # Define max number of pods
-  targetCPUUtilizationPercentage: 80 # Trigger scaling when CPU usage reaches 80%
-  # You can also use targetMemoryUtilizationPercentage if you want to scale based on memory
+  targetMemoryUtilizationPercentage: 70
 
 
 image:
@@ -92,10 +98,10 @@ resources:
   enabled: true
   requests:
     # cpu: 100m
-    memory: 560Mi
+    memory: 1024Mi
   limits:
     # cpu: 150m
-    memory: 1024Mi
+    memory: 1648Mi
 #   # enabled: true
 #   requests:
 #     cpu: 100m           # Minimum CPU guaranteed to the pod
@@ -182,4 +188,3 @@ secrets:
   HUBSPOT_INTEGRATION_ENABLED: "false"
   HUBSPOT_PORTALID: "47180514"
   HUBSPOT_FORMID: "c3f6097b-b6a4-486a-8e60-ddd7dbefe535"
-
