@@ -42,7 +42,7 @@ To configure the chart to connect to MongoDB and Kafka, pass in their URLs using
 
 #### Example with `--set`
 ```bash
-helm install sparrow-api sparrow-api/sparrow-api --namespace sparrow-dev   --set secrets.DB_URL="mongodb://username:password@sparrow-mongodb.sparrow-dev.svc.cluster.local/"   --set secrets.KAFKA_BROKER="my-kafka-0.my-kafka-headless.sparrow-dev.svc.cluster.local:9092"
+helm install sparrow-api sparrow-api/sparrow-api --namespace sparrow-dev   --set secrets.DB_URL="mongodb://<username>:<password>@mongodb-service/"   --set secrets.KAFKA_BROKER="<KAFKA_URL>:9092"
 ```
 
 ### Configuration
