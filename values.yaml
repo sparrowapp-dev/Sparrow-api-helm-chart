@@ -16,7 +16,7 @@ autoscaling:
 
 
 image:
-  repository: shindepratikk/sparrow-api
+  repository: sparrowapi.azurecr.io/sparrow-api   #shindepratikk/sparrow-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: v1
@@ -149,14 +149,16 @@ secrets:
   APP_URL: "http://localhost"
   JWT_SECRET_KEY: "webtoken-secret-key"
   JWT_EXPIRATION_TIME: "2400"
-  DB_URL: "mongodb://root:THlILUCAYD@sparrow-mongodb.sparrow-dev.svc.cluster.local/"
+  # DB_URL: "mongodb://root:THlILUCAYD@sparrow-mongodb.sparrow-dev.svc.cluster.local/"
+  DB_URL: "mongodb://root:oRsCMKt3Y6@sparrow-mongodb.sparrow-test.svc.cluster.local/"
   GOOGLE_CLIENT_ID: "google-client-id"
   GOOGLE_CLIENT_SECRET: "google-client-secret"
   GOOGLE_APP_URL: "google-app-url"
   LOGIN_REDIRECT_URL: "login-redirect-url"
   GOOGLE_ACCESS_TYPE: "google-access-type"
   EMAIL_VALIDATION_CODE_EXPIRY_TIME: ""
-  KAFKA_BROKER: "my-kafka-0.my-kafka-headless.sparrow-dev.svc.cluster.local:9092"
+  # KAFKA_BROKER: "my-kafka-0.my-kafka-headless.sparrow-dev.svc.cluster.local:9092"
+  KAFKA_BROKER: "sparrow-kafka.sparrow-test.svc.cluster.local:9092"
   SMTP_SENDER_EMAIL: ""
   SMTP_SENDER_PASSWORD: ""
   SMTP_MAIL_HOST: ""

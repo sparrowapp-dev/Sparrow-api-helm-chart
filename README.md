@@ -55,15 +55,15 @@ The following table lists common configurable parameters of the `sparrow-api` ch
 | `autoscaling.enabled`                 | Enable horizontal pod autoscaling                    | `true`                      |
 | `autoscaling.minReplicas`             | Minimum number of replicas                           | `1`                         |
 | `autoscaling.maxReplicas`             | Maximum number of replicas                           | `10`                        |
-| `autoscaling.targetCPUUtilizationPercentage` | Target CPU usage percentage for scaling       | `80`                        |
-| `image.repository`                    | Docker image repository for sparrow-api              | `shindepratikk/sparrow-api` |
+| `autoscaling.targetCPUUtilizationPercentage` | Target CPU usage percentage for scaling       | `70`                        |
+| `image.repository`                    | Docker image repository for sparrow-api              | `sparrowapi.azurecr.io/sparrow-api` |
 | `image.tag`                           | Image tag to use                                     | `v1`                        |
 | `service.port`                        | Port on which the service is exposed                 | `80`                        |
 | `service.targetPort`                  | Port the container listens on                        | `9000`                      |
 | `secrets.DB_URL`                      | MongoDB connection URL                               | (empty)                     |
 | `secrets.KAFKA_BROKER`                | Kafka broker URL                                     | (empty)                     |
-| `resources.requests.memory`           | Minimum memory guaranteed for the pod                | `560Mi`                     |
-| `resources.limits.memory`             | Maximum memory allowed for the pod                   | `1024Mi`                    |
+| `resources.requests.memory`           | Minimum memory guaranteed for the pod                | `1024Mi`                     |
+| `resources.limits.memory`             | Maximum memory allowed for the pod                   | `1648Mi`                    |
 
 ### Example `values.yaml`
 
@@ -76,10 +76,10 @@ autoscaling:
   enabled: true
   minReplicas: 1
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 70
 
 image:
-  repository: shindepratikk/sparrow-api
+  repository: sparrowapi.azurecr.io/sparrow-api
   pullPolicy: IfNotPresent
   tag: v1
 
