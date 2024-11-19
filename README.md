@@ -56,7 +56,7 @@ The following table lists common configurable parameters of the `sparrow-api` ch
 | `autoscaling.minReplicas`             | Minimum number of replicas                           | `1`                         |
 | `autoscaling.maxReplicas`             | Maximum number of replicas                           | `10`                        |
 | `autoscaling.targetCPUUtilizationPercentage` | Target CPU usage percentage for scaling       | `70`                        |
-| `image.repository`                    | Docker image repository for sparrow-api              | `sparrowapi.azurecr.io/sparrow-api` |
+| `image.repository`                    | Docker image repository for sparrow-api              | `sparrowapi/sparrow-api`    |
 | `image.tag`                           | Image tag to use                                     | `v1`                        |
 | `service.port`                        | Port on which the service is exposed                 | `80`                        |
 | `service.targetPort`                  | Port the container listens on                        | `9000`                      |
@@ -79,7 +79,7 @@ autoscaling:
   targetCPUUtilizationPercentage: 70
 
 image:
-  repository: sparrowapi.azurecr.io/sparrow-api
+  repository: sparrowapi/sparrow-api
   pullPolicy: IfNotPresent
   tag: v1
 
