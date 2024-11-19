@@ -25,7 +25,7 @@ Ensure that MongoDB and Kafka services are running and retrieve the connection U
 
 1. **Add the Sparrow Helm Repository** (if hosted externally):
    ```bash
-   helm repo add sparrow-api https://your-helm-repo-url
+   helm repo add sparrow-api https://helm-chart-url
    helm repo update
    ```
 
