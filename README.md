@@ -25,7 +25,7 @@ Ensure that MongoDB and Kafka services are running and retrieve the connection U
 
 1. **Add the Sparrow Helm Repository** (if hosted externally):
    ```bash
-   helm repo add sparrow-api https://helm-chart-url
+   helm repo add sparrow-api https://sparrowapp-dev.github.io/Sparrow-api-helm-chart
    helm repo update
    ```
 
@@ -33,7 +33,7 @@ Ensure that MongoDB and Kafka services are running and retrieve the connection U
    Replace `<namespace>` with your desired namespace (e.g., `sparrow-dev`).
 
    ```bash
-   helm install sparrow-api sparrow-api/sparrow-api --namespace <namespace>
+   helm upgrade --install sparrow-api sparrow-api/sparrow-api --namespace <namespace>
    ```
 
 ### Configuring MongoDB and Kafka URLs
