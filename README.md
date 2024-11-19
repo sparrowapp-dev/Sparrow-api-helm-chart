@@ -38,7 +38,7 @@ Ensure that MongoDB and Kafka services are running and retrieve the connection U
 
 ### Configuring MongoDB and Kafka URLs
 
-To configure the chart to connect to MongoDB and Kafka, pass in their URLs using `--set` or update the `values.yaml` file.
+To connect the chart to MongoDB and Kafka, provide their URLs using the `--set` flag or by updating the `values.yaml` file.
 
 #### Example with `--set`
 ```bash
