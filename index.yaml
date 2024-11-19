@@ -13,6 +13,16 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-19T07:38:03.95553006Z"
+    description: A Helm chart for Kubernetes
+    digest: abe893f6b0700502762cddbbd2c48fb7591f2f0b4186d01aaf172a44cae4dc99
+    name: sparrow-api
+    type: application
+    urls:
+    - https://github.com/sparrowapp-dev/Sparrow-api-helm-chart/releases/download/sparrow-api-0.1.1/sparrow-api-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-19T07:05:55.351555016Z"
     description: A Helm chart for Kubernetes
     digest: cee88dcb89926b3088d3931c368400f6b643250b8a320c52ccc1b65d674b575b
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/sparrowapp-dev/Sparrow-api-helm-chart/releases/download/sparrow-api-0.1.0/sparrow-api-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-19T07:31:22.105416512Z"
+generated: "2024-11-19T07:38:03.955561008Z"
