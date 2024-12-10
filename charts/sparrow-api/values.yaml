@@ -19,7 +19,7 @@ image:
   repository: sparrowapi/sparrow-api   #shindepratikk/sparrow-api | sparrowapi.azurecr.io/sparrow-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v1
+  tag: v2
 
 imagePullSecrets: []
 nameOverride: ""
